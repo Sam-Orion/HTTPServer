@@ -3,8 +3,8 @@ const express = require('express');
 const app = new express();
 
 app.get("/sum", function(req,res) {
-    const a = req.query.a;
-    const b = req.query.b;
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
 
     res.json({
         ans: a + b
@@ -30,8 +30,8 @@ app.get("/divide", function(req, res) {
 });
 
 app.get("/subtract", function(req, res) {
-    const a = req.query.a;
-    const b = req.query.b;
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
 
     res.json({
         ans: a - b
